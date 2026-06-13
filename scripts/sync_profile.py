@@ -238,7 +238,7 @@ def parse_source(path: str) -> dict:
         data["projects"].append({
             "name": proj["name"],
             "url": url,
-            "description": proj["description"][:120],
+            "description": proj["description"][:320],
         })
 
     # --- Skills ---

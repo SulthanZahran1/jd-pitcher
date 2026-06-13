@@ -1,65 +1,70 @@
 name: "Sulthan Zahran Ma'ruf"
-tagline: "Hardware-software integration engineer specializing in factory automation and intralogistics"
-education: "Bachelor of Science — Physics / Instrumentation Physics (2019–2023)"
+tagline: "Hardware-software integration engineer specializing in factory automation and intralogistics systems"
+education: "Bachelor of Science (BS) in Physics / Instrumentation Physics (2019–2023)"
 
 experience:
-  - role: "AMHS Software Engineer"
+  - role: "AMHS Software Engineer / Smart Factory Integrators/Developers"
     company_ref: "lg_sinarmas_technology_solutions"
     duration: ""
     highlights:
-      - "Grew the logistics software team from 1 (himself) to 16+ engineers."
-      - "Personally involved in training every team member. Created comprehensive onboarding covering MES, RTD, CIM, and HSMS/SECS/GEM protocols."
-      - "Conducts factory line tours, ongoing mentorship, and maintains an accessible \"ask me anything\" support style."
-  - role: "International Deployment (South Korea)"
+      - "Develop and optimize logistics algorithms for AMHS managing thousands of concurrent material movements across 8 production lines in 24/7 battery manufacturing (Hyundai LG Indonesia Factory)"
+      - "Maintain and enhance RTD logic, directly impacting production throughput and material flow efficiency"
+      - "Develop and test MES systems (C# WPF and SQL), implement RTD fixes and optimizations (SQL Server)"
+  - role: "System Integrator (International Deployment, South Korea)"
     company_ref: "lg_ensol_ochang_factory"
     duration: ""
-    highlights: []
+    highlights:
+      - "Comprehensive integration testing of AMHS subsystems: AGV, conveyor, and stocker systems"
+      - "Proactively identified, diagnosed, and resolved 15+ potential integration issues during testing phase"
+      - "Made code fixes to prevent production delays"
+  - role: "Research Assistant (FAAN Laboratory)"
+    company_ref: "university_of_indonesia"
+    duration: ""
+    highlights:
+      - "Engineered MATLAB-based GUI application for advanced spectroscopic data analysis at FAAN lab"
+      - "GUI actively used by FAAN lab to observe spectroscopy peak changes over time, enabling new research avenues"
+      - "Features: real-time data acquisition and processing, peak detection and fitting algorithms, data filtering (Moving Average, Savitzky-Golay), interactive Tauc plot generation, historical and real-time analysis modes"
   - role: "Instrumentation Engineer (Freelance)"
     company_ref: "pt_polychemie_asia_pacific_permai"
     duration: ""
     highlights:
-      - "Built a prototype ADC (Analog-to-Digital Converter) system to enable PC-based reading of temperature and flow sensors."
-      - "Evaluated DAQ systems, PLCs, and Arduino as platform options."
-      - "Developed a GUI application to plot, save, and auto-detect data from the prototype."
-  - role: "Research Assistant, FAAN Laboratory"
-    company_ref: "university_of_indonesia"
-    duration: ""
-    highlights:
-      - "Features: Real-time data acquisition and processing, peak detection and fitting algorithms, data filtering (Moving Average, Savitzky-Golay), interactive Tauc plot generation, historical and real-time analysis modes."
+      - "Highly manual factory — technicians hand-recording analog sensor values"
+      - "Prototyped ADC (Analog-to-Digital Converter) system to enable PC-based temperature and flow monitoring"
+      - "Evaluated DAQ systems, PLCs, and Arduino; coded GUI to plot, save, and auto-detect data from prototype"
 
 projects:
   - name: "Timing Diagram Analyzer"
     url: ""
-    description: "Python, SQL, Log Processing"
+    description: "(Python, SQL, Log Processing) — Production-critical diagnostic tool for AMHS incident analysis. Processes 4,120,953 entries in 104.03 seconds. Reduces diagnosis time from hours/days to minutes. Actively used by multiple team members."
   - name: "IoT Sensor Monitoring Automation"
     url: ""
-    description: "JavaScript, Web Scraping"
-  - name: "PLC Log Waveform Visualizer"
+    description: "(JavaScript, Web Scraping) — Automates monitoring of 50+ IoT sensor web interfaces. 3 hours → 15 minutes per cycle (36 person-hours saved). Built in first week after Korea deployment."
+  - name: "SEC Financial Data Extraction Pipeline"
     url: ""
-    description: "Originally PyQt6, later migrated to React + Go"
-  - name: "ThingWorx IoT Automation (TwxAuto)"
+    description: "(Python, Gemini Flash 2.0 API, Google AI) — End-to-end pipeline with web scraping and LLM-powered parsing. 500+ SEC documents (75,000+ total pages). Automated extraction of structured financial data."
+  - name: "BMKG Sensor Network Monitoring System"
     url: ""
-    description: "JavaScript"
-  - name: "Conveyor Map XML Visualizer"
+    description: "(Flask, React, Mapbox) — Real-time monitoring with map-based visualization. Used as BMKG's internal sensor tracking system. Enables rapid identification of sensor failures."
+  - name: "Bella"
     url: ""
-    description: "PySide6"
-  - name: "SECS/GEM Southbound Simulator"
+    description: "(TypeScript, Go, React, Docker, Traefik) — AI agent platform with WhatsApp integration. Full-stack: React frontend, Go backend, TypeScript worker, Docker/Traefik deployment. Action Gateway with typed verb catalog and per-backend routing (hermes-as-brain). Lark OAuth enterprise identity binding. Per-tenant agent contain"
+  - name: "JD Pitcher"
     url: ""
-    description: "Go, Embedded Web UI"
+    description: "(Go, Docker, Traefik) — JD-to-profile matching API. Live at zahranm.cloud/recruit. Self-updating profile pipeline from source_of_truth.md with company anonymization masks."
 
 skills:
   - category: "Industrial Systems & Automation"
-    items: ["AMHS (Automated Material Handling Systems) — core expertise", "MES (Manufacturing Execution Systems) — factory-level production management", "RTD (Real-Time Dispatch) — logistics dispatching algorithms", "AGV integration and fleet coordination", "PLC programming (Schneider) and HMI design", "Control systems — PID tuning, system dynamics"]
-  - category: "Programming Languages & Frameworks"
-    items: ["C#", "SQL", "Go", "Rust", "JavaScript/TypeScript", "MATLAB"]
-  - category: "Data Engineering & ML"
-    items: ["ETL pipeline development", "Large-scale log processing (millions of records, 100MB+ files)", "Web scraping — BeautifulSoup", "Real-time monitoring dashboards"]
+    items: ["CIM", "MES", "RTD", "AGV Integration", "PLC Programming"]
+  - category: "Programming & Software Development"
+    items: ["Python", "C#", "SQL", "Go", "JavaScript/TypeScript", "MATLAB"]
+  - category: "Data Engineering & Analysis"
+    items: ["ETL Pipeline Development", "Web Scraping", "Data Visualization"]
+  - category: "DevOps & Infrastructure"
+    items: ["Git", "Docker", "Linux", "Traefik"]
   - category: "Robotics & Logistics"
-    items: ["Multi-robot coordination (via AGV fleet systems)", "Real-time logistics/dispatching algorithms", "Material flow optimization and bottleneck analysis", "ROS2 (development environment set up, exploring for portfolio)"]
-  - category: "DevOps & Tools"
-    items: ["Git, Jenkins CI/CD", "Docker", "Linux, Windows", "CUDA/PyTorch (ML dev environment setup)"]
+    items: ["Multi-robot Coordination", "Real-time Logistics Algorithms", "Material Flow Optimization", "ROS2"]
   - category: "Hardware-Software Integration"
-    items: ["PLC ↔ Software communication", "SECS/GEM protocol implementation", "Control systems ↔ IT systems integration", "Sensor integration & DAQ systems", "Physical constraint intuition that pure CS engineers typically lack"]
+    items: ["PLC ↔ Software Communication", "SECS/GEM Protocol Implementation", "Control Systems ↔ IT Systems Integration"]
 
 meta:
   interests: ["industrial IoT", "intralogistics", "physics-informed ML"]
