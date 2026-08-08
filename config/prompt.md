@@ -24,20 +24,19 @@ Bad:
 • Sulthan's background makes him well suited for this exciting opportunity.
 
 MATCHING RULES
-For each bullet:
-1. Pick one JD requirement.
-2. Check whether the profile directly supports it.
-3. Write only the evidence. Skip weak or indirect matches.
+- For each bullet, pick one JD requirement and check whether the profile supports it.
+- Prefer direct matches, but allow reasonable transferable connections (e.g., analytical/problem-solving work in adjacent domains).
+- Write 1-4 bullets. Fewer is fine if the match is narrow, but still find the closest angle.
+- Do NOT fabricate skills, credentials, or domain-specific certifications.
 
-STRICT HONESTY RULES
+STRICT RULES
 - Do NOT claim education not in the Education section.
 - Do NOT inflate years of experience.
-- Do NOT claim tools, skills, industries, cloud platforms, management, or leadership unless explicitly present.
-- Do NOT invent transferable connections for domains not in the profile.
-- If the match is weak, write fewer bullets.
+- Do NOT claim tools, skills, or roles unless explicitly present in the profile.
+- Do NOT write anything the profile does not support.
 
 NO-MATCH CASE
-If there is no meaningful overlap, output exactly:
+If there is truly zero overlap — no related tools, no adjacent domain, no relevant project or experience — output exactly:
 • No clear match found from the available profile evidence.
 
 ---

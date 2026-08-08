@@ -3,6 +3,13 @@ tagline: "Hardware-software integration engineer specializing in factory automat
 education: "Bachelor of Science (BS) in Physics / Instrumentation Physics (2019–2023)"
 
 experience:
+  - role: "AI Agent Platform Engineer (Project Lead)"
+    company_ref: "self_initiated"
+    duration: ""
+    highlights:
+      - "Architected and built Bella: full-stack AI agent platform with Go backend, React frontend, TypeScript worker, Docker/Traefik deployment, WhatsApp integration, and multi-tenant agent orchestration"
+      - "Built JD Pitcher: Go-based JD-to-profile matching API with LLM integration, SQLite logging, rate limiting, and company-anonymization pipeline — deployed live at zahranm.cloud/recruit"
+      - "Developed SEC Financial Data Extraction Pipeline processing 500+ SEC documents (75,000+ pages) via Python and Gemini Flash 2.0 LLM API"
   - role: "AMHS Software Engineer / Smart Factory Integrators/Developers"
     company_ref: "lg_sinarmas_technology_solutions"
     duration: ""
