@@ -1,14 +1,14 @@
 :root {
-  color-scheme: light;
-  --color-primary: #2563eb;
-  --color-primary-dark: #1e40af;
-  --color-background: #ffffff;
-  --color-surface: #f9fafb;
-  --color-text: #1f2937;
-  --color-text-muted: #6b7280;
-  --color-divider: #e5e7eb;
-  --color-code: #0f172a;
-  --shadow-soft: 0 12px 40px rgba(15, 23, 42, 0.08);
+  color-scheme: dark;
+  --color-primary: #10b981;
+  --color-primary-dark: #0d9467;
+  --color-background: #101014;
+  --color-surface: #0c0c10;
+  --color-text: #e4e4e7;
+  --color-text-muted: #8b8b94;
+  --color-divider: #232329;
+  --color-code: #e4e4e7;
+  --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.45);
 }
 
 * {
@@ -24,7 +24,7 @@ html {
 body {
   background: transparent;
   color: var(--color-text);
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "JetBrains Mono", monospace;
   line-height: 1.7;
   min-height: 100vh;
   padding: 0;
@@ -43,7 +43,7 @@ body {
   width: 100%;
   background: var(--color-background);
   border: 1px solid var(--color-divider);
-  border-radius: 18px;
+  border-radius: 12px;
   box-shadow: var(--shadow-soft);
   padding: clamp(1.25rem, 4vw, 1.75rem);
 }
@@ -56,16 +56,16 @@ body {
 
 .eyebrow,
 label {
-  font-family: "JetBrains Mono", "Inter", monospace;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
   font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-primary);
 }
 
 h2 {
-  font-family: "JetBrains Mono", "Inter", monospace;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
   color: var(--color-code);
   font-size: clamp(1.15rem, 3vw, 1.35rem);
   line-height: 1.25;
@@ -90,7 +90,7 @@ textarea {
   background: var(--color-surface);
   color: var(--color-text);
   border: 1px solid var(--color-divider);
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 0.95rem 1rem;
   font-size: 0.95rem;
   font-family: inherit;
@@ -101,12 +101,12 @@ textarea {
 textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  background: #0e0e13;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12);
 }
 
 textarea::placeholder {
-  color: #9ca3af;
+  color: #5d5d66;
 }
 
 .form-footer,
@@ -123,7 +123,7 @@ button {
   align-items: center;
   justify-content: center;
   background: var(--color-primary);
-  color: #ffffff;
+  color: #09090b;
   border: 2px solid var(--color-primary);
   border-radius: 6px;
   padding: 0.7rem 1.6rem;
@@ -168,7 +168,7 @@ button:disabled {
 
 .error-message {
   min-height: 1.3rem;
-  color: #b91c1c;
+  color: #f87171;
   font-size: 0.9rem;
   font-weight: 500;
 }
@@ -186,8 +186,8 @@ button:disabled {
   align-items: center;
   padding: 0.35rem 0.85rem;
   border-radius: 6px;
-  background: rgba(37, 99, 235, 0.1);
-  color: var(--color-primary);
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -209,8 +209,8 @@ button:disabled {
 
 .btn-back:hover,
 .btn-back:focus-visible {
-  background: rgba(37, 99, 235, 0.08);
-  color: var(--color-primary-dark);
+  background: rgba(16, 185, 129, 0.08);
+  color: #34d399;
 }
 
 .is-hidden {
@@ -224,7 +224,7 @@ button:disabled {
 
   .widget-card,
   .pitch-card {
-    border-radius: 14px;
+    border-radius: 10px;
     padding: 1rem;
   }
 
