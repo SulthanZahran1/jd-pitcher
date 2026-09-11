@@ -106,7 +106,7 @@ textarea:focus {
 }
 
 textarea::placeholder {
-  color: #a1a1aa;
+  color: #6b6b74;
 }
 
 .form-footer,
@@ -237,5 +237,12 @@ button:disabled {
 
   button {
     width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
   }
 }
