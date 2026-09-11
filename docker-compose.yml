@@ -2,7 +2,14 @@ services:
   jd-pitcher:
     build: .
     ports:
-      - "9100:8080"
+      # Bind to the docker0 bridge gateway ONLY, never 0.0.0.0.
+      # Traefik reaches the app at http://172.17.0.1:9100 (see
+      # traefik/dynamic.yml), which needs the port published on the bridge.
+      # Publishing on 0.0.0.0 also exposed the app directly on the public IP
+      # with no TLS and no sec-headers, letting anyone bypass Traefik
+      # entirely. Commit 465c470 set this correctly; c2ca5d9 reverted it to
+      # "9100:8080" by accident — keep the explicit 172.17.0.1 prefix.
+      - "172.17.0.1:9100:8080"
     env_file: .env
     volumes:
       - ./config:/app/config:ro
