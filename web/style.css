@@ -64,6 +64,10 @@ label {
   color: var(--color-primary);
 }
 
+/* Embedded in the hub: the section label above the iframe already names the
+   widget, so the in-card eyebrow is redundant. */
+html.embedded .widget-card > .widget-header .eyebrow { display: none; }
+
 h2 {
   font-family: "JetBrains Mono", ui-monospace, monospace;
   color: var(--color-code);

@@ -55,6 +55,13 @@
   </main>
 
   <script>
+    // When embedded in the hub iframe the section label already says
+    // "recruiter copilot"; hide the duplicate eyebrow inside the card.
+    if (window.location.search.indexOf("embed=1") !== -1) {
+      document.documentElement.classList.add("embedded");
+    }
+  </script>
+  <script>
     const form = document.getElementById('pitch-form');
     const input = document.getElementById('jd-input');
     const submit = document.getElementById('submit-btn');
