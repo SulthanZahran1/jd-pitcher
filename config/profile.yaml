@@ -1,14 +1,22 @@
 name: "Sulthan Zahran Ma'ruf"
-tagline: "Hardware-software integration engineer specializing in factory automation and intralogistics systems"
+tagline: "AI engineer building AI agents and the infrastructure they need in production: tool gateways, observability, and tests for agent-written code"
 education: "Bachelor of Science (BS) in Physics / Instrumentation Physics (2019–2023)"
 
 experience:
-  - role: "AI Agent Platform Engineer (Project Lead)"
+  - role: "Software Engineer, AI agents (part-time, remote)"
+    company_ref: "metatech"
+    duration: "Apr 2026 – present"
+    highlights:
+      - "Primary engineer of sambungapi: an in-house Rust (axum) tool gateway that lets AI agents act on real accounts via OAuth-connected tools, replacing a third-party vendor. Built from an empty repo in 8 weeks: 3,100+ commits, 326 test files, AES-256-GCM token encryption at rest, multi-org tenancy, CSRF protection, durable outbox with a separate worker mode, and a migration runbook for the agent platform"
+      - "Core engineer (team of several) on Bella, an AI chief of staff working across WhatsApp, Gmail, Calendar and Lark with pluggable reasoning engines (TypeScript/Hono API, React web, TypeScript worker, Go WhatsApp bridge). 2,000+ commits, mostly in the worker that executes agent turns; wrote or revised 120+ of the team's ~340 architecture decision records"
+      - "Built most of Bella's observability console (Hono + React): per-turn cost, execution waterfall, and a human-review loop that turns production conversations into labelled ground-truth datasets"
+  - role: "Self-initiated open-source and side projects"
     company_ref: "self_initiated"
     duration: ""
     highlights:
-      - "Architected and built Bella: full-stack AI agent platform with Go backend, React frontend, TypeScript worker, Docker/Traefik deployment, WhatsApp integration, and multi-tenant agent orchestration"
-      - "Built JD Pitcher: Go-based JD-to-profile matching API with LLM integration, SQLite logging, rate limiting, and company-anonymization pipeline — deployed live at zahranm.cloud/recruit"
+      - "Built mutation testers for Rust, Go and Dart to check the quality of agent-written tests: rust_mutant (published on crates.io, LLVM coverage routing, LLVM-IR equivalence to discard equivalent mutants), dart-mutant (17 operators, Homebrew tap, prebuilt binaries for 4 platforms), gopher_mutant (21 operator classes)"
+      - "Built honjang: real-time English–Korean voice translator with honorific awareness (Expo app, FastAPI over WebSocket, Deepgram Nova-3 speech-to-text, any LLM via OpenRouter, ElevenLabs text-to-speech), barge-in, and clause-boundary streaming designed for ~300 ms to first audio"
+      - "Built JD Pitcher: Go-based JD-to-profile pitch generator with LLM integration, SQLite logging, rate limiting, and a company-anonymization pipeline — deployed live at zahranm.cloud/recruit"
       - "Developed SEC Financial Data Extraction Pipeline processing 500+ SEC documents (75,000+ pages) via Python and Gemini Flash 2.0 LLM API"
   - role: "AMHS Software Engineer / Smart Factory Integrators/Developers"
     company_ref: "lg_sinarmas_technology_solutions"
@@ -52,28 +60,39 @@ projects:
   - name: "BMKG Sensor Network Monitoring System"
     url: ""
     description: "(Flask, React, Mapbox) — Real-time monitoring with map-based visualization. Used as BMKG's internal sensor tracking system. Enables rapid identification of sensor failures."
+  - name: "sambungapi"
+    url: ""
+    description: "(Rust, axum, PostgreSQL, OAuth 2.0) — In-house tool gateway that lets AI agents act on real accounts (Google, Microsoft Graph, GitHub, Slack, Notion, Linear, Jira). Single static binary, AES-256-GCM token encryption at rest, multi-org tenancy, durable outbox. 8 weeks from empty repo; primary engineer."
   - name: "Bella"
     url: ""
-    description: "(TypeScript, Go, React, Docker, Traefik) — AI agent platform with WhatsApp integration. Full-stack: React frontend, Go backend, TypeScript worker, Docker/Traefik deployment. Action Gateway with typed verb catalog and per-backend routing (hermes-as-brain). Lark OAuth enterprise identity binding. Per-tenant agent contain"
+    description: "(TypeScript, Hono, React, Go, MongoDB, Redis) — Team-built AI chief of staff across WhatsApp, Gmail, Calendar and Lark with pluggable reasoning engines. Core engineer on the agent worker; built most of the observability console (per-turn cost, execution waterfall, human review into ground-truth datasets)."
+  - name: "Mutation testers (rust_mutant, dart-mutant, gopher_mutant)"
+    url: "https://github.com/SulthanZahran1/rust_mutant"
+    description: "(Rust, LLVM IR) — Open-source mutation testers for Rust, Go and Dart that run only the tests covering a mutated line; rust_mutant 1.0.1 is on crates.io."
+  - name: "honjang"
+    url: "https://github.com/SulthanZahran1/honjang"
+    description: "(Expo, FastAPI, WebSocket, Deepgram, OpenRouter, ElevenLabs) — Real-time English–Korean voice translator with honorific awareness, barge-in, walkie-talkie and always-on agent modes."
   - name: "JD Pitcher"
     url: ""
     description: "(Go, Docker, Traefik) — JD-to-profile matching API. Live at zahranm.cloud/recruit. Self-updating profile pipeline from source_of_truth.md with company anonymization masks."
 
 skills:
+  - category: "AI & LLM Engineering"
+    items: ["AI agents", "Tool use / MCP", "RAG", "LLM observability", "Agent harnesses", "Voice pipelines", "Mutation testing"]
   - category: "Industrial Systems & Automation"
     items: ["CIM", "MES", "RTD", "AGV Integration", "PLC Programming"]
   - category: "Programming & Software Development"
-    items: ["Python", "C#", "SQL", "Go", "JavaScript/TypeScript", "MATLAB"]
+    items: ["Rust", "Go", "TypeScript", "Python", "C#", "SQL", "MATLAB"]
   - category: "Data Engineering & Analysis"
     items: ["ETL Pipeline Development", "Web Scraping", "Data Visualization"]
   - category: "DevOps & Infrastructure"
-    items: ["Git", "Docker", "Linux", "Traefik"]
+    items: ["Git", "Docker", "Linux", "Traefik", "PostgreSQL", "MongoDB", "Redis"]
   - category: "Robotics & Logistics"
     items: ["Multi-robot Coordination", "Real-time Logistics Algorithms", "Material Flow Optimization", "ROS2"]
   - category: "Hardware-Software Integration"
-    items: ["PLC ↔ Software Communication", "SECS/GEM Protocol Implementation", "Control Systems ↔ IT Systems Integration"]
+    items: ["PLC–Software Communication", "SECS/GEM Protocol Implementation", "Control Systems–IT Systems Integration"]
 
 meta:
-  interests: ["industrial IoT", "intralogistics", "physics-informed ML"]
+  interests: ["AI agents", "LLM infrastructure", "evals and testing for agent-written code", "industrial AI"]
   location: "Jakarta, Indonesia"
   visa_status: ""
