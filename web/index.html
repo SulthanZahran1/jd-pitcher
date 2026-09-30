@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recruiter Pitch Generator</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%23fafafa'/><circle cx='8' cy='8' r='3.2' fill='%230b7a56'/></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <script>
+    // Embedded in the hub iframe: the hub already titles the section, so the
+    // card drops its own header and frame. Set before CSS to avoid a flash.
+    if (window.location.search.indexOf("embed=1") !== -1) document.documentElement.classList.add("embedded");
+  </script>
   <link rel="stylesheet" href="/recruit/style.css">
 </head>
 <body>
@@ -20,6 +22,12 @@
       </header>
 
       <form action="./pitch" method="POST" id="pitch-form" class="pitch-form">
+        <div class="samples" role="group" aria-label="Try a sample role">
+          <span>try a sample:</span>
+          <button type="button" data-s="0">Applied AI engineer</button>
+          <button type="button" data-s="1">Agent platform</button>
+          <button type="button" data-s="2">Rust backend</button>
+        </div>
         <label for="jd-input">Job description</label>
         <textarea
           name="jd"
@@ -56,13 +64,6 @@
   </main>
 
   <script>
-    // When embedded in the hub iframe the section label already says
-    // "recruiter copilot"; hide the duplicate eyebrow inside the card.
-    if (window.location.search.indexOf("embed=1") !== -1) {
-      document.documentElement.classList.add("embedded");
-    }
-  </script>
-  <script>
     const form = document.getElementById('pitch-form');
     const input = document.getElementById('jd-input');
     const submit = document.getElementById('submit-btn');
@@ -72,6 +73,20 @@
     const output = document.getElementById('pitch-output');
     const reset = document.getElementById('reset-btn');
     const count = document.getElementById('char-count');
+
+    const SAMPLES = [
+      'Applied AI Engineer. Build LLM-powered agents that call internal and third-party tools, with evals and observability. Python or TypeScript; experience with RAG, tool use and production APIs.',
+      'Senior Engineer, Agent Platform. Own the runtime and tool-integration layer our AI agents run on: OAuth connectors, multi-tenant auth, tracing and cost controls. Rust or Go preferred.',
+      'Backend Engineer (Rust). Design and ship async services in Rust (tokio/axum) with PostgreSQL, reliable event delivery and third-party API integrations.'
+    ];
+    document.querySelectorAll('.samples button').forEach((b) => {
+      b.addEventListener('click', () => {
+        if (submit.disabled) return;
+        input.value = SAMPLES[+b.dataset.s];
+        count.textContent = input.value.length;
+        form.requestSubmit();
+      });
+    });
 
     function escapeHTML(value) {
       return value.replace(/[&<>'"]/g, (char) => ({

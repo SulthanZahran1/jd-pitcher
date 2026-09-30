@@ -1,5 +1,13 @@
+@font-face { font-family: "Plex Sans"; src: url(/fonts/ibm-plex-sans-latin-400-normal.woff2) format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Plex Sans"; src: url(/fonts/ibm-plex-sans-latin-500-normal.woff2) format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Plex Mono"; src: url(/fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Plex Mono"; src: url(/fonts/ibm-plex-mono-latin-500-normal.woff2) format("woff2"); font-weight: 500; font-display: swap; }
+
 :root {
   color-scheme: light;
+  --ink: #16171a;
+  --sans: "Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --color-primary: #0b7a56;
   --color-primary-dark: #096647;
   --color-background: #ffffff;
@@ -24,8 +32,8 @@ html {
 body {
   background: transparent;
   color: var(--color-text);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "JetBrains Mono", monospace;
-  line-height: 1.7;
+  font-family: var(--sans);
+  line-height: 1.6;
   min-height: 100vh;
   padding: 0;
 }
@@ -56,7 +64,7 @@ body {
 
 .eyebrow,
 label {
-  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-family: var(--mono);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -64,12 +72,20 @@ label {
   color: var(--color-primary);
 }
 
-/* Embedded in the hub: the section label above the iframe already names the
-   widget, so the in-card eyebrow is redundant. */
-html.embedded .widget-card > .widget-header .eyebrow { display: none; }
+/* Embedded in the hub: the hub section already titles the widget and draws
+   the frame, so the card drops its header, border and shadow. */
+html.embedded .widget-card > .widget-header { display: none; }
+html.embedded body { min-height: 0; }
+html.embedded label { color: var(--color-text-muted); font-weight: 500; }
+html.embedded .widget-card { border: 0; box-shadow: none; background: transparent; padding: 1rem; }
+html.embedded .pitch-card { box-shadow: none; }
+
+.samples { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-family: var(--mono); font-size: 0.78rem; color: var(--color-text-muted); }
+.samples button { background: transparent; color: var(--ink); border: 1px solid var(--color-divider); border-radius: 999px; padding: 0.4rem 0.8rem; font-size: 0.78rem; font-weight: 400; width: auto; }
+.samples button:hover, .samples button:focus-visible { background: transparent; border-color: var(--ink); }
 
 h2 {
-  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-family: var(--mono);
   color: var(--color-code);
   font-size: clamp(1.15rem, 3vw, 1.35rem);
   line-height: 1.25;
@@ -126,22 +142,22 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-primary);
+  background: var(--ink);
   color: #ffffff;
-  border: 2px solid var(--color-primary);
-  border-radius: 6px;
-  padding: 0.7rem 1.6rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  font-family: inherit;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: 0.7rem 1.3rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: var(--mono);
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 button:hover,
 button:focus-visible {
-  background: var(--color-primary-dark);
-  border-color: var(--color-primary-dark);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 button:disabled {
