@@ -15,7 +15,7 @@ experience:
     duration: ""
     highlights:
       - "Built mutation testers for Rust, Go and Dart to check the quality of agent-written tests: rust_mutant (published on crates.io, LLVM coverage routing, LLVM-IR equivalence to discard equivalent mutants), dart-mutant (17 operators, Homebrew tap, prebuilt binaries for 4 platforms), gopher_mutant (21 operator classes)"
-      - "Built honjang: real-time English–Korean voice translator with honorific awareness (Expo app, FastAPI over WebSocket, Deepgram Nova-3 speech-to-text, any LLM via OpenRouter, ElevenLabs text-to-speech), barge-in, and clause-boundary streaming designed for ~300 ms to first audio"
+      - "Built honjang: real-time English–Korean voice translator with honorific awareness (Expo app, FastAPI over WebSocket, Deepgram Nova-3 speech-to-text, any LLM via OpenRouter, ElevenLabs text-to-speech), barge-in, two Korean speech levels (해요체 / 합쇼체) chosen by listener, and clause-by-clause text-to-speech"
       - "Built JD Pitcher: Go-based JD-to-profile pitch generator with LLM integration, SQLite logging, rate limiting, and a company-anonymization pipeline — deployed live at zahranm.cloud/recruit"
       - "Developed SEC Financial Data Extraction Pipeline processing 500+ SEC documents (75,000+ pages) via Python and Gemini Flash 2.0 LLM API"
   - role: "AMHS Software Engineer / Smart Factory Integrators/Developers"
@@ -65,7 +65,7 @@ projects:
     description: "(Rust, axum, PostgreSQL, OAuth 2.0) — In-house tool gateway that lets AI agents act on real accounts (Google, Microsoft Graph, GitHub, Slack, Notion, Linear, Jira). Single static binary, AES-256-GCM token encryption at rest, multi-org tenancy, durable outbox. Replaced a paid vendor in 8 weeks; primary engineer."
   - name: "Bella"
     url: ""
-    description: "(TypeScript, Hono, React, Go, MongoDB, Redis) — Team-built AI chief of staff across WhatsApp, Gmail, Calendar and Lark with pluggable reasoning engines. Core engineer on the agent worker; built most of the observability console (per-turn cost, execution waterfall, human review into ground-truth datasets)."
+    description: "(TypeScript, Hono, React, Go, MongoDB, Redis) — Team-built AI chief of staff on WhatsApp, Lark, Teams and web, acting through Gmail, Calendar and Lark tools behind per-role permission gates, with pluggable reasoning engines. Core engineer on the agent worker; built most of the observability console (per-turn cost, execution waterfall, human review into ground-truth datasets)."
   - name: "Mutation testers (rust_mutant, dart-mutant, gopher_mutant)"
     url: "https://github.com/SulthanZahran1/rust_mutant"
     description: "(Rust, LLVM IR) — Open-source mutation testers for Rust, Go and Dart that run only the tests covering a mutated line; rust_mutant 1.0.1 is on crates.io."

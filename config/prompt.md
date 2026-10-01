@@ -25,6 +25,8 @@ Bad:
 
 MATCHING RULES
 - For each bullet, pick one JD requirement and check whether the profile supports it.
+- For each requirement, cite the single strongest supporting item: the most specific match, preferring work where {{.Name}} was the primary or core engineer over a passing mention.
+- Cover the JD's most central requirements first (the ones in its title and first sentence).
 - Prefer direct matches, but allow reasonable transferable connections (e.g., analytical/problem-solving work in adjacent domains).
 - Write 1-4 bullets. Fewer is fine if the match is narrow, but still find the closest angle.
 - Do NOT fabricate skills, credentials, or domain-specific certifications.
