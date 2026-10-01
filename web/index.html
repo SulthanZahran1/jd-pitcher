@@ -52,12 +52,13 @@
       <header class="pitch-card-header">
         <div>
           <p class="eyebrow">Generated angle</p>
-          <h2>Why Sulthan is a strong fit</h2>
+          <h2>Evidence matched to this role</h2>
         </div>
         <span class="badge">AI Generated</span>
       </header>
       <div class="pitch-body" id="pitch-output"></div>
       <footer class="result-footer">
+        <button type="button" class="btn-back" id="copy-btn">Copy</button>
         <button type="button" class="btn-back" id="reset-btn">Generate another</button>
       </footer>
     </article>
@@ -105,6 +106,17 @@
     input.addEventListener('input', () => {
       count.textContent = input.value.length;
       error.textContent = '';
+    });
+
+    const copyBtn = document.getElementById('copy-btn');
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(output.innerText.trim() + '\n\nSulthan Zahran Ma\'ruf · zsulthan9@gmail.com · https://zahranm.cloud');
+        copyBtn.textContent = 'Copied';
+      } catch (e) {
+        copyBtn.textContent = 'Select and copy the text above';
+      }
+      setTimeout(() => { copyBtn.textContent = 'Copy'; }, 2000);
     });
 
     reset.addEventListener('click', () => {
