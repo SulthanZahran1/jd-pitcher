@@ -5,7 +5,7 @@ education: "Bachelor of Science (BS) in Physics / Instrumentation Physics (2019â
 experience:
   - role: "Software Engineer, AI agents (part-time, remote)"
     company_ref: "metatech"
-    duration: "Apr 2026 â€“ present"
+    duration: ""
     highlights:
       - "Primary engineer of sambungapi: an in-house Rust (axum) tool gateway that lets AI agents act on real accounts (Google, Microsoft, GitHub, Slack, Notion, Linear, Jira) via OAuth-connected tools. Replaced a paid third-party integrations vendor in 8 weeks, with AES-256-GCM token encryption at rest, multi-org tenancy and a durable outbox"
       - "Core engineer on Bella, an AI chief of staff that handles a company's daily admin (email, meetings, cross-department updates) from WhatsApp, web or Lark with per-role permissions; works on the worker that executes every agent turn"

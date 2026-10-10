@@ -17,7 +17,11 @@ func (c *Config) MaskedProfile() string {
 		b.WriteString("## Experience\n")
 		for _, exp := range c.Profile.Experience {
 			mask := c.Masks.Entities[exp.CompanyRef]
-			b.WriteString(fmt.Sprintf("\n**%s** at %s (%s)\n", exp.Role, mask, exp.Duration))
+			if exp.Duration != "" {
+				b.WriteString(fmt.Sprintf("\n**%s** at %s (%s)\n", exp.Role, mask, exp.Duration))
+			} else {
+				b.WriteString(fmt.Sprintf("\n**%s** at %s\n", exp.Role, mask))
+			}
 			for _, h := range exp.Highlights {
 				b.WriteString(fmt.Sprintf("- %s\n", h))
 			}
